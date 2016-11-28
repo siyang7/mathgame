@@ -1,4 +1,19 @@
-<?php session_start(); ?>
+<?php session_start(); 
+
+        $usr = "admin@admin.com";
+        $psw = "password";
+        $username = '$_POST[username]';
+        $password = '$_POST[password]';
+        //$usr == $username && $psw == $password
+        //session_start();
+        if ($_SESSION['login']==true || ($_POST['username']=="admin@admin.com" && $_POST['password']=="password")) {
+            echo "password accepted";
+            $_SESSION['login']=true;
+        else {
+            echo "incorrect login";
+        }
+
+?>
 
 <!DOCTYPE HTML>
 <html lang="en">
@@ -12,23 +27,7 @@
 
     <body>
 
-        
-        <?php
-          $usr = "admin@admin.com";
-          $psw = "password";
-          $username = '$_POST[username]';
-          $password = '$_POST[password]';
-          //$usr == $username && $psw == $password
-          //session_start();
-          if ($_SESSION['login']==true || ($_POST['username']=="admin@admin.com" && $_POST['password']=="password")) {
-            echo "password accepted";
-            $_SESSION['login']=true;
-            else {
-              echo "incorrect login";
-            }
-        ?>
-        
-        
+     
 
         <div class="container">
             <div class="row">
