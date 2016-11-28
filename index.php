@@ -6,7 +6,7 @@
         $email = '$_POST[email]';
         $password = '$_POST[password]';
         
-        
+        */
         
         if ($_SESSION['login']==true || ($_POST['email']=="admin@admin.com" && $_POST['password']=="aaa")) {
             echo "Password Accepted";
@@ -15,7 +15,7 @@
             echo "Your login credentials failed.";
         }
             
-    */
+    
         if (isset($_SESSION["IsLoggedIn"]))  {
             header ("Location: login.php");
         }
