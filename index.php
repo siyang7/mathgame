@@ -1,6 +1,6 @@
 <?php 
 
-
+/*
         $usr = "a@a.a";
         $psw = "aaa";
         $email = '$_POST[email]';
@@ -15,11 +15,11 @@
             echo "Your login credentials failed.";
         }
             
-    
+    */
         if (isset($_SESSION["IsLoggedIn"]))  {
             header ("Location: login.php");
         }
-        
+
 ?>
 
 

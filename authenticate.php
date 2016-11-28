@@ -23,9 +23,9 @@
             
             
             <div class="row">
-                <label class="col-sm-2 col-sm-offset-3">    <?php  echo(rand(0,20)); ?>  </label>
+                <label class="col-sm-2 col-sm-offset-3">    <?php  $var1 = echo(rand(0,20)); ?>  </label>
                 <label class="col-sm-2">+</label>
-                <label class="col-sm-2">    <?php   echo(rand(0,20)); ?>  </label>
+                <label class="col-sm-2">    <?php   $var2 = echo(rand(0,20)); ?>  </label>
                 <div class="col-sm-3"></div>
             </div>
             
