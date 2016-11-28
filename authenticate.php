@@ -1,7 +1,7 @@
 <?php session_start(); 
 
-$val1 = echo(rand(0,20));
-$val2 = echo(rand(0,20));
+$val1 = (rand(0,20));
+$val2 = (rand(0,20));
 
 ?>
 
