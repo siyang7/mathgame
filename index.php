@@ -32,7 +32,7 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-sm-10 col-sm-offset-1"><h1>Please login to enjoy our math game.</h1></div>
+                <div class="col-sm-10 col-sm-offset-1"><h1>Please login to enjoy a math game.</h1></div>
                 <div class="col-sm-1"></div>
             </div>
 
