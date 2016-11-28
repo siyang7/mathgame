@@ -1,6 +1,6 @@
 <?php session_start();
 
-
+/*
         $usr = "admin@admin.com";
         $psw = "aaa";
         $email = '$_POST[email]';
@@ -19,6 +19,7 @@
         if (isset($_SESSION["IsLoggedIn"]))  {
             header ("Location: login.php");
         }
+        */
 ?>
 
 
