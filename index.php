@@ -1,20 +1,22 @@
-<?php session_start(); 
+<?php 
 
-/*
+
         $usr = "admin@admin.com";
-        $psw = "password";
-        $username = '$_POST[username]';
+        $psw = "aaa";
+        $email = '$_POST[email]';
         $password = '$_POST[password]';
-        //$usr == $username && $psw == $password
-        //session_start();
-        if ($_SESSION['login']==true || ($_POST['username']=="admin@admin.com" && $_POST['password']=="password")) {
-            echo "password accepted";
+        
+        session_start();
+        
+        if ($_SESSION['login']==true || ($_POST['email']=="admin@admin.com" && $_POST['password']=="aaa")) {
+            echo "Password Accepted";
             $_SESSION['login']=true;
         else {
-            echo "incorrect login";
+            echo "Your login credentials failed.";
         }
-*/
 ?>
+
+
 
 <!DOCTYPE HTML>
 <html lang="en">
