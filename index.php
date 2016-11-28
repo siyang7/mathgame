@@ -1,5 +1,6 @@
 <?php session_start(); 
 
+/*
         $usr = "admin@admin.com";
         $psw = "password";
         $username = '$_POST[username]';
@@ -12,7 +13,7 @@
         else {
             echo "incorrect login";
         }
-
+*/
 ?>
 
 <!DOCTYPE HTML>
