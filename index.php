@@ -15,11 +15,11 @@
             echo "Your login credentials failed.";
         }
             
-    
+    */
         if (isset($_SESSION["IsLoggedIn"]))  {
             header ("Location: login.php");
         }
-        */
+        
 ?>
 
 
