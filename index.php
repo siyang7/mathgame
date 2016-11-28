@@ -1,12 +1,12 @@
-<?php session_start();
+<?php 
 
-/*
+
         $usr = "a@a.a";
         $psw = "aaa";
         $email = '$_POST[email]';
         $password = '$_POST[password]';
         
-        //session_start();
+        session_start();
         
         if ($_SESSION['login']==true || ($_POST['email']=="a@a.a" && $_POST['password']=="aaa")) {
             echo "Password Accepted";
@@ -15,7 +15,7 @@
             echo "Your login credentials failed.";
         }
             
-    */
+    
         if (isset($_SESSION["IsLoggedIn"]))  {
             header ("Location: login.php");
         }
