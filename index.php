@@ -1,14 +1,14 @@
 <?php session_start();
 
 /*
-        $usr = "admin@admin.com";
+        $usr = "a@a.a";
         $psw = "aaa";
         $email = '$_POST[email]';
         $password = '$_POST[password]';
         
+        //session_start();
         
-        
-        if ($_SESSION['login']==true || ($_POST['email']=="admin@admin.com" && $_POST['password']=="aaa")) {
+        if ($_SESSION['login']==true || ($_POST['email']=="a@a.a" && $_POST['password']=="aaa")) {
             echo "Password Accepted";
             $_SESSION['login']=true;
         else {
