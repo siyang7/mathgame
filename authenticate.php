@@ -5,6 +5,15 @@ extract($_POST);
 $var1 = (rand(0,20));
 $var2 = (rand(0,20));
 
+
+if (isset($_SESSION['count'])) {
+    $_SESSION['count'] = $_SESSION['count'] + 1;
+} else {
+    $_SESSION['count'] = 0;
+    $_SESSION['countCorect'] = 0;
+}
+
+
 $var3 = (rand(0,1));
     if ($var3 == 0) {
         $operator = "+";
@@ -15,11 +24,7 @@ $var3 = (rand(0,1));
     }
 
 /*
-if (isset($_SESSION['count'])) {
-   $_SESSION['count'] = $_SESSION['count'] + 1;
-} else {
-   $_SESSION['count'] = 0;
-}
+
 
 if ($_POST["answer"] == $_POST["correctAnswer"]) {
    if (isset($_SESSION['countCorrect'])) {
@@ -107,7 +112,7 @@ echo "<!DOCTYPE HTML>
         <div class='row'>
         
         
-            <div class='col-sm-4 col-sm-offset-4'>Score: 0 / 0</div>
+            <div class='col-sm-4 col-sm-offset-4'>Score: $_SESSION['count'] / $_SESSION['countCorrect'] </div>
             
             
             
@@ -116,6 +121,7 @@ echo "<!DOCTYPE HTML>
     </div>
 </body>
 </html>";
+
 
 
 
