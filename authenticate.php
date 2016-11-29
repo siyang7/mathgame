@@ -92,4 +92,21 @@ echo "<!DOCTYPE HTML>
 </body>
 </html>";
 
+
+
+if ($_POST['anwser'] == $_POST['$result']) {
+        echo " 
+        
+        
+   
+
+    ";
+    if(isset($_SESSION['count'])){
+        $_SESSION['count'] = $_SESSION['count'] + 1;
+    } else {
+        $_SESSION['count'] = 0;
+    }
+    }
+    echo "count = ". $_SESSION['count'];
+
 ?>
