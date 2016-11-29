@@ -40,9 +40,9 @@ echo "<!DOCTYPE HTML>
             
             
 
-            <input type='hidden' name='first_number' value='6' />
-            <input type='hidden' name='operation' value='+' />
-            <input type='hidden' name='second_number' value='4' />
+            <input type='hidden' name='first_number' value='$var1' />
+            <input type='hidden' name='operation' value='$operator' />
+            <input type='hidden' name='second_number' value='$var2' />
             <input type='hidden' name='total' value='0' />
             <input type='hidden' name='score' value='0' />
 
