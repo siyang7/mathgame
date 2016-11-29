@@ -1,24 +1,4 @@
-<?php session_start();
-
-
-
-        $username = $password = $userError = $passError = '';
-        if(isset($_POST['sub'])) {
-            
-            $username = $_POST['email']; $password = $_POST['password'];
-            
-            if($username === 'a@a.a' && $password === 'aaa') {
-                $_SESSION['login'] = true; header('LOCATION: authenticate.php'); die();
-        }
-          
-        if($username !== 'a@a.a')$userError = '<p style="color: red">Invalid Username</p>';
-        if($password !== 'aaa')$passError = '<p style="color: red">Invalid Password</p>';
-        
-        }
-
-
-
-echo "<!DOCTYPE HTML>
+<!DOCTYPE HTML>
     
     
 <html lang='en'>
@@ -40,12 +20,18 @@ echo "<!DOCTYPE HTML>
                 <div class='col-sm-1'></div>
             </div>
 
-            <form action='{$_SERVER['PHP_SELF']}' method='post' role='form' class='form-horizontal'>
+            <form action='authenticate.php' method='post' role='form' class='form-horizontal'>
                 <div class='form-group'>
                     <div class='col-sm-4 text-right'>Email:</div>
                     <div class='col-sm-3'>
                         <input type='text' class='form-control' id='email' name='email' placeholder='Email' size='6' />
-                        <div class='error'>$userError</div>
+                        
+                        
+                        <?php if(isset($userError)) { ?>
+                            <div class='error'><?php echo $userError ?></div>
+                        <?php } ?>
+                        
+                        
                     </div>
                     <div class='col-sm-5'></div>
                 </div>
@@ -53,7 +39,12 @@ echo "<!DOCTYPE HTML>
                     <div class='col-sm-4 text-right'>Password:</div>
                     <div class='col-sm-3'>
                         <input type='text' class='form-control' id='password' name='password' placeholder='Password' size='6' />
-                        <div class='error'>$passError</div>
+                        
+                        <?php if(isset($passError)) { ?>
+                            <div class='error'><?php echo $passError ?></div>
+                        <?php } ?>
+                        
+                        
                     </div>
                     <div class='col-sm-5'></div>
                 </div>
@@ -70,7 +61,6 @@ echo "<!DOCTYPE HTML>
         </div>
     
     </body>
-</html>";
+</html>
 
 
-?>

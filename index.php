@@ -1,10 +1,12 @@
 <?php session_start(); 
 
-/*
-if (!isset($_SESSION["isAuthenticated"])
+
+if (!isset($_SESSION['login'])) {
     
-    Header(Location login.php"")
-*/
+    header('Location: login.php');
+        
+} 
+  
 
 extract($_POST);
 
@@ -13,13 +15,15 @@ $secondNum = (rand(0,20));
 
 $operator = (rand(0,1));
 
-if ($var3 == 0) {
+if ($operator == 0) {
     $operator = "+";
-    $answer = $var1 + $var2;
+    $answer = $firstNum + $secondNum;
 } else {
     $operator = "-";
-    $answer = $var1 - $var2;
+    $answer = $firstNum - $secondNum;
 }
+
+
 
 
 //counter
@@ -27,8 +31,6 @@ if (isset($count)) {
     $count = $count + 1;
 } else {
     
-    //echo "count = " . $_SESSION['count'];
-    //echo "overall = " . $_SESSION['attempts'];
     
     $count = 0;
     $countCorrect = 0;
@@ -36,32 +38,61 @@ if (isset($count)) {
 
 
 
-if ($answer == $userAnswer) {
-    echo "Correct.";
-   if (isset($countCorrect)) {
-       $countCorrect++;
-   } else {
-       $countCorrect = 0;
-   }  
-} else {
-    echo "Incorrect.&nbsp;" . $firstNum . "&nbsp;" . $operator . "&nbsp;" . $secondNum . "&nbsp;" . "is " . $answer;
+
+if (isset($userAnswer)) {
+
+    if ($answer == $userAnswer) {
+        echo "Correct.";
+       if (isset($countCorrect)) {
+           $countCorrect++;
+       } else {
+           $countCorrect = 0;
+       }  
+    } else {
+        echo "Incorrect.&nbsp;" . $firstNum . "&nbsp;" . $operator . "&nbsp;" . $secondNum . "&nbsp;" . "is " . $answer;
+    }
 }
+
        
-
-
 /*
-if ($result == answer) {
-     echo "Correct.";
-} else {
-    echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is" . "&nbsp;" . $result;
+if (isset($answer) && isset($userAnswer)) {
+    if ($answer == $userAnswer) {
+
+       if (isset($countCorrect)) {
+
+           $countCorrect = $countCorrect + 1;
+           echo "<div class='col-sm-4'>Correct.</div>";
+
+       } else {
+
+           echo "<div class='col-sm-4'>Incorrect. $firstNum $operator $secondNum is $answer.</div>";
+           $countCorrect = $countCorrect;
+       }  
+    }
 }
 */
+
+
+
 
 
 /*
 // for only allowing numbers
-if (is_numeric(answer) {
+if (is_numeric($answer) {
 */
+
+/*
+//only allow numbers
+ Trying to add is_numeric to only allow numbers    
+}
+    else {
+        echo "You must enter a number!";
+        
+    }
+*/
+
+
+
 ?>
 
 <!DOCTYPE HTML>
@@ -131,8 +162,9 @@ if (is_numeric(answer) {
         <div class='row'>
         
         
-            <div class='col-sm-4 col-sm-offset-4'>Score: <?php echo "$countCorrect / $count" ?>  </div>
-            
+            <?php if (isset($countCorrect) && isset( $count))  { ?>
+                <div class='col-sm-4 col-sm-offset-4'>Score: <?php echo "$countCorrect / $count" ?>  </div>
+            <?php } ?>
             
             
             <div class='col-sm-4'></div>
@@ -142,15 +174,10 @@ if (is_numeric(answer) {
 </html>
 
 <?php
-/*
-//only allow numbers
- Trying to add is_numeric to only allow numbers    
-}
-    else {
-        echo "You must enter a number!";
-        
-    }
-*/
+
+
+
+
 
 
 /*
@@ -168,31 +195,7 @@ $_SESSION['key'] = $key;
 
 
 
-if ($_POST['$answer'] == $_POST['myAnswer']) {
-    
-   if (isset($_SESSION['countCorrect'])) {
-       
-       $_SESSION['countCorrect'] = $_SESSION['countCorrect'] + 1;
-       echo "<div class='col-sm-4'>Correct.</div>";
-       
-   } else {
-       
-       echo "<div class='col-sm-4'>Incorrect. $var1 $operator $var2 is $answer.</div>";
-       $_SESSION['countCorrect'] = $_SESSION['countCorrect'];
-   }  
-}
 
-
-
-
-
-/*
-if ($result == answer) {
-     echo "Correct.";
-} else {
-    echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is " . $result;
-}
-*/
 
 
 
