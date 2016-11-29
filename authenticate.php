@@ -13,7 +13,7 @@ if (isset($_SESSION['count'])) {
     $_SESSION['countCorect'] = 0;
 }
 
-if ($_POST["answer"] == $_POST["correctAnswer"]) {
+if ($_POST['answer'] == $_POST['$result']) {
    if (isset($_SESSION['countCorrect'])) {
        $_SESSION['countCorrect'] = $_SESSION['countCorrect'] + 1;
    } else {
@@ -132,11 +132,9 @@ if ($result == answer) {
 
 
 
-if ($_POST['anwser'] == $_POST['$result']) {
-        echo " 
-        
-
-    ";
+if ($_POST['answer'] == $_POST['$result']) {
+        echo "";
+    
     if(isset($_SESSION['count'])) {
         $_SESSION['count'] = $_SESSION['count'] + 1;
     } else {
