@@ -4,7 +4,7 @@ extract($_POST);
 
 $var1 = (rand(0,20));
 $var2 = (rand(0,20));
-/*
+
 $var3 = (rand(0,1));
     if ($var3 == 0) {
         $operator = "+";
@@ -13,7 +13,7 @@ $var3 = (rand(0,1));
         $operator = "-";
         $result = $var1 - $var2;
     }
-
+/*
 if ($result == answer) {
      echo "Correct.";
 } else {
@@ -95,14 +95,7 @@ echo "<!DOCTYPE HTML>
 </html>";
 
 
-$var3 = (rand(0,1));
-    if ($var3 == 0) {
-        $operator = "+";
-        $result = $var1 + $var2;
-    } else {
-        $operator = "-";
-        $result = $var1 - $var2;
-    }
+
 
 if ($result == answer) {
      echo "Correct.";
