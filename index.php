@@ -39,7 +39,7 @@ echo "<!DOCTYPE HTML>
                 <div class='col-sm-1'></div>
             </div>
 
-            <form action='authenticate.php' method='post' role='form' class='form-horizontal'>
+            <form action='{$_SERVER['PHP_SELF']}' method='post' role='form' class='form-horizontal'>
                 <div class='form-group'>
                     <div class='col-sm-4 text-right'>Email:</div>
                     <div class='col-sm-3'>
