@@ -8,10 +8,10 @@ $var2 = (rand(0,20));
 $var3 = (rand(0,1));
     if ($var3 == 0) {
         $operator = "+";
-        $result = $var1 + $var2;
+        $answer = $var1 + $var2;
     } else {
         $operator = "-";
-        $result = $var1 - $var2;
+        $answer = $var1 - $var2;
     }
 
 /*
@@ -29,6 +29,7 @@ if ($_POST["answer"] == $_POST["correctAnswer"]) {
    }  
 }
 */
+
 
 /*
 if ($result == answer) {
@@ -69,7 +70,7 @@ echo "<!DOCTYPE HTML>
             <input type='hidden' name='first_number' value='$var1' />
             <input type='hidden' name='operation' value='$operator' />
             <input type='hidden' name='second_number' value='$var2' />
-            <input type='hidden' name='total' value='$result' />
+            <input type='hidden' name='total' value='$answer' />
             <input type='hidden' name='score' value='0' />
 
             <div class='form-group'>
@@ -104,7 +105,12 @@ echo "<!DOCTYPE HTML>
             <div class='col-sm-4'></div>
         </div>
         <div class='row'>
+        
+        
             <div class='col-sm-4 col-sm-offset-4'>Score: 0 / 0</div>
+            
+            
+            
             <div class='col-sm-4'></div>
         </div>
     </div>
@@ -126,8 +132,6 @@ if ($result == answer) {
 if ($_POST['anwser'] == $_POST['$result']) {
         echo " 
         
-        
-   
 
     ";
     if(isset($_SESSION['count'])) {
