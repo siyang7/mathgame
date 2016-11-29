@@ -74,7 +74,7 @@ if (is_numeric(answer) {
 </head>
 <body>
     <div class='container'>
-        <form action='authenticate.php' method='post' role='form' class='form-horizontal'>
+        <form action='login.php' method='post' role='form' class='form-horizontal'>
             <div class='row'>
                 <div class='col-sm-4 col-sm-offset-4'><h1>Math Game</h1></div>
                 <div class='col-sm-4'><a href='logout.php' class='btn btn-default btn-sm'>Logout</a></div>
