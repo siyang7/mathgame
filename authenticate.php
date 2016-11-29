@@ -14,20 +14,21 @@ $var3 = (rand(0,1));
         $result = $var1 - $var2;
     }
 
-
+/*
 if (isset($_SESSION['count'])) {
    $_SESSION['count'] = $_SESSION['count'] + 1;
 } else {
    $_SESSION['count'] = 0;
 }
 
-if ($_POST["answer"] == $_POST["correctAnswer"]){
+if ($_POST["answer"] == $_POST["correctAnswer"]) {
    if (isset($_SESSION['countCorrect'])) {
        $_SESSION['countCorrect'] = $_SESSION['countCorrect'] + 1;
    } else {
        $_SESSION['countCorrect'] = 0;
    }  
 }
+*/
 
 /*
 if ($result == answer) {
@@ -119,7 +120,7 @@ if ($result == answer) {
     echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is" . "&nbsp;" . $result;
 }
 
-/*
+
 
 
 if ($_POST['anwser'] == $_POST['$result']) {
@@ -136,6 +137,6 @@ if ($_POST['anwser'] == $_POST['$result']) {
     }
 }
     echo "&nbsp;&nbsp;&nbsp;" . $_SESSION['count'];
-*/
+
 
 ?>
