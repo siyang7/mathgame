@@ -11,8 +11,8 @@
                 $_SESSION['login'] = true; header('LOCATION: authenticate.php'); die();
         }
           
-        if($username !== 'a@a.a')$userError = 'Invalid Username';
-        if($password !== 'aaa')$passError = 'Invalid Password';
+        if($username !== 'a@a.a')$userError = '<p style=\"color: red\">Invalid Username</p>';
+        if($password !== 'aaa')$passError = '<p style=\"color: red\">Invalid Password</p>';
         
         }
 
