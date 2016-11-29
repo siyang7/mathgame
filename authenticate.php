@@ -12,7 +12,7 @@ if (isset($_SESSION['count'])) {
     $_SESSION['count'] = $_SESSION['count'] + 1;
 } else {
     $_SESSION['count'] = 0;
-    $_SESSION['countCorect'] = 0;
+    $_SESSION['countCorrect'] = 0;
 }
 
 
@@ -113,7 +113,7 @@ echo "<!DOCTYPE HTML>
         <div class='row'>
         
         
-            <div class='col-sm-4 col-sm-offset-4'>Score: 0 / 0 </div>
+            <div class='col-sm-4 col-sm-offset-4'>Score: $_SESSION['count'] / $_SESSION['countCorrect'] </div>
             
             
             
