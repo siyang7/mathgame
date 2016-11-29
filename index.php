@@ -55,14 +55,16 @@ echo "<!DOCTYPE HTML>
                 <div class='form-group'>
                     <div class='col-sm-4 text-right'>Email:</div>
                     <div class='col-sm-3'>
-                        <label for='email'></label><input type='text' class='form-control' id='email' name='email' placeholder='Email' size='6' />
+                        <input type='text' class='form-control' id='email' name='email' placeholder='Email' size='6' />
+                        <div class='error'>$userError</div>
                     </div>
                     <div class='col-sm-5'></div>
                 </div>
                 <div class='form-group'>
                     <div class='col-sm-4 text-right'>Password:</div>
                     <div class='col-sm-3'>
-                        <label for='password'></label><input type='text' class='form-control' id='password' name='password' placeholder='Password' size='6' />
+                        <input type='text' class='form-control' id='password' name='password' placeholder='Password' size='6' />
+                        <div class='error'>$passError</div>
                     </div>
                     <div class='col-sm-5'></div>
                 </div>
