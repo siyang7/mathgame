@@ -15,7 +15,7 @@ $var3 = (rand(0,1));
     }
 
 
-
+//counter
 if (isset($_SESSION['count'])) {
     $_SESSION['count'] = $_SESSION['count'] + 1;
 } else {
@@ -93,14 +93,14 @@ echo "<!DOCTYPE HTML>
             <input type='hidden' name='first_number' value='firstNum' />
             <input type='hidden' name='operation' value='operator' />
             <input type='hidden' name='second_number' value='secondNum' />
-            <input type='hidden' name='correctAnswer' value='$answer' />
+            <input type='hidden' name='myAnswer' value='$answer' />
             <input type='hidden' name='score' value='0' />
 
             <div class='form-group'>
                 <div class='col-sm-3 col-sm-offset-4'>
                 
                 
-                    <input type='text' class='form-control' id='answer' name='answer' placeholder='Enter answer' size='6'>
+                    <input type='text' class='form-control' id='myAnswer' name='myAnswer' placeholder='Enter answer' size='6'>
                     
             
                     
@@ -166,7 +166,7 @@ $_SESSION['key'] = $key;
 
 
 
-if ($_POST['$answer'] == $_POST['correctAnswer']) {
+if ($_POST['$answer'] == $_POST['myAnswer']) {
     
    if (isset($_SESSION['countCorrect'])) {
        
@@ -175,9 +175,8 @@ if ($_POST['$answer'] == $_POST['correctAnswer']) {
        
    } else {
        
-       //$_SESSION["countCorrect"] = 0;
-       //echo "Incorrect. " . $lhs . " X " . $rhs . " = " . $correct_answer;
        echo "<div class='col-sm-4'>Incorrect. $var1 $operator $var2 is $answer.</div>";
+       $_SESSION['countCorrect'] = $_SESSION['countCorrect'];
    }  
 }
 
