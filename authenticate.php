@@ -68,8 +68,11 @@ echo "<!DOCTYPE HTML>
             <div class='row'>
                 <div class='col-sm-3 col-sm-offset-4'>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button type='submit' class='btn btn-primary btn-sm'>
+                    
+                    <button type='submit' value='submit' class='btn btn-primary btn-sm'>
                     Submit</button>
+                    
+                    
                 </div>
                 <div class='col-sm-3'></div>
             </div>
