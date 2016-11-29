@@ -1,6 +1,6 @@
 <?php session_start(); 
 
-        extract($_POST);
+        //extract($_POST);
         $username = $password = $userError = $passError = '';
         if(isset($_POST['sub'])) {
             
