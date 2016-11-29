@@ -1,30 +1,25 @@
-<?php 
+<?php session_start(); 
 
-/*
-        $usr = "a@a.a";
-        $psw = "aaa";
-        $email = '$_POST[email]';
-        $password = '$_POST[password]';
-        
-        session_start();
-        
-        if ($_SESSION['login']==true || ($_POST['email']=="a@a.a" && $_POST['password']=="aaa")) {
-            echo "Password Accepted";
-            $_SESSION['login']=true;
-        else {
-            echo "Your login credentials failed.";
-        }
+
+        $email = $password = $emailError = $passError = '';
+        if(isset($_POST['sub'])) {
             
-    */
-        if (isset($_SESSION["IsLoggedIn"]))  {
-            header ("Location: index.php");
+            $username = $_POST['email']; $password = $_POST['password'];
+            
+            if($username === 'a@a.a' && $password === 'aaa'){
+                $_SESSION['login'] = true; header('LOCATION: authenticate.php'); die();
+        }
+          
+        if($username !== 'a@a.a')$userError = 'Invalid Username';
+        if($password !== 'aaa')$passError = 'Invalid Password';
+        
         }
 
-?>
 
 
-
-<!DOCTYPE HTML>
+echo "<!DOCTYPE HTML>
+    
+    
 <html lang="en">
 
 <head>
@@ -38,41 +33,41 @@
 
      
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1"><h1>Please login to enjoy a math game.</h1></div>
-                <div class="col-sm-1"></div>
+        <div class='container'>
+            <div class='row'>
+                <div class='col-sm-10 col-sm-offset-1'><h1>Please login to enjoy a math game.</h1></div>
+                <div class='col-sm-1'></div>
             </div>
 
-            <form action="authenticate.php" method="post" role="form" class="form-horizontal">
-                <div class="form-group">
-                    <div class="col-sm-4 text-right">Email:</div>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Email" size="6" />
+            <form action='authenticate.php' method='post' role='form' class='form-horizontal'>
+                <div class='form-group'>
+                    <div class='col-sm-4 text-right'>Email:</div>
+                    <div class='col-sm-3'>
+                        <input type='text' class='form-control' id='email' name='email' placeholder='Email' size='6' />
                     </div>
-                    <div class="col-sm-5"></div>
+                    <div class='col-sm-5'></div>
                 </div>
-                <div class="form-group">
-                    <div class="col-sm-4 text-right">Password:</div>
-                    <div class="col-sm-3">
-                        <input type="text" class="form-control" id="password" name="password" placeholder="Password" size="6" />
+                <div class='form-group'>
+                    <div class='col-sm-4 text-right'>Password:</div>
+                    <div class='col-sm-3'>
+                        <input type='text' class='form-control' id='password' name='password' placeholder='Password' size='6' />
                     </div>
-                    <div class="col-sm-5"></div>
+                    <div class='col-sm-5'></div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-3 col-sm-offset-4">
-                        <button type="submit" class="btn btn-primary">Login</button>
+                <div class='row'>
+                    <div class='col-sm-3 col-sm-offset-4'>
+                        <button type='submit' class='btn btn-primary'>Login</button>
                     </div>
                 </div>
             </form>
 
-            <div class="row">
+            <div class='row'>
 
             </div>
         </div>
     
     </body>
-</html>
+</html>";
 
 
-<?php ?>
+?>
