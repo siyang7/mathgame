@@ -19,11 +19,11 @@ echo "<!DOCTYPE html>
    </head>
 <body>
   <form name='input' action='{$_SERVER['PHP_SELF']}' method='post'>
-    <label for='username'></label><input type='text' value='$username' id='username' name='username' />
+    <label for='username'></label>Email:<input type='text' value='$username' id='username' name='username' />
     <div class='error'>$userError</div>
-    <label for='password'></label><input type='password' value='$password' id='password' name='password' />
+    <label for='password'></label>Password:<input type='password' value='$password' id='password' name='password' />
     <div class='error'>$passError</div>
-    <input type='submit' value='Home' name='sub' />
+    <input type='submit' value='Submit' name='sub' />
   </form>
   <script type='text/javascript' src='common.js'></script>
 </body>
