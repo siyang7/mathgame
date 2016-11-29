@@ -14,9 +14,9 @@ $var3 = (rand(0,1));
     }
 
 if ($result == answer) {
-    echo "Correct.";
+    $statement = "Correct.";
 } else {
-    echo "Incorrect. The correct answer is" . $result;
+    $statement = "Incorrect. The correct answer is " . $result;
 }
 
 
@@ -58,6 +58,7 @@ echo "<!DOCTYPE HTML>
                 
                 
                     <input type='text' class='form-control' id='answer' name='answer' placeholder='Enter answer' size='6'>
+                    <div>$statement</div>
                     
                     
                 </div>
