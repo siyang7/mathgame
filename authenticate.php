@@ -4,6 +4,7 @@ extract($_POST);
 
 $var1 = (rand(0,20));
 $var2 = (rand(0,20));
+/*
 $var3 = (rand(0,1));
     if ($var3 == 0) {
         $operator = "+";
@@ -18,6 +19,7 @@ if ($result == answer) {
 } else {
     echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is" . "&nbsp;" . $result;
 }
+*/
 
 
 echo "<!DOCTYPE HTML>
@@ -93,6 +95,23 @@ echo "<!DOCTYPE HTML>
 </html>";
 
 
+$var3 = (rand(0,1));
+    if ($var3 == 0) {
+        $operator = "+";
+        $result = $var1 + $var2;
+    } else {
+        $operator = "-";
+        $result = $var1 - $var2;
+    }
+
+if ($result == answer) {
+     echo "Correct.";
+} else {
+    echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is" . "&nbsp;" . $result;
+}
+
+
+
 
 if ($_POST['anwser'] == $_POST['$result']) {
         echo " 
@@ -101,7 +120,7 @@ if ($_POST['anwser'] == $_POST['$result']) {
    
 
     ";
-    if(isset($_SESSION['count'])){
+    if(isset($_SESSION['count'])) {
         $_SESSION['count'] = $_SESSION['count'] + 1;
     } else {
         $_SESSION['count'] = 0;
