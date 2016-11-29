@@ -1,16 +1,21 @@
 <?php session_start(); 
 
+extract($_POST);
 
 $var1 = (rand(0,20));
 $var2 = (rand(0,20));
 $var3 = (rand(0,1));
     if ($var3 == 0) {
         $operator = "+";
-        $answer = $var1 + $var2;
+        $result = $var1 + $var2;
     } else {
         $operator = "-";
-        $answer = $var1 - $var2;
+        $result = $var1 - $var2;
     }
+
+if ($result == answer) {
+    echo "Correct.";
+}
 
 
 echo "<!DOCTYPE HTML>
@@ -48,7 +53,11 @@ echo "<!DOCTYPE HTML>
 
             <div class='form-group'>
                 <div class='col-sm-3 col-sm-offset-4'>
+                
+                
                     <input type='text' class='form-control' id='answer' name='answer' placeholder='Enter answer' size='6'>
+                    
+                    
                 </div>
                 <div class='col-sm-5'></div>
             </div>
