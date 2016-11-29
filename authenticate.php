@@ -34,6 +34,12 @@ $var3 = (rand(0,1));
         $operator = "-";
         $answer = $var1 - $var2;
     }
+
+if ($result == answer) {
+     echo "Correct.";
+} else {
+    echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is " . $result;
+}
         
 
 
@@ -126,12 +132,13 @@ echo "<!DOCTYPE HTML>
 
 
 
-
+/*
 if ($result == answer) {
      echo "Correct.";
 } else {
     echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is " . $result;
 }
+*/
 
 
 
