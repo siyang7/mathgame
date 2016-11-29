@@ -70,7 +70,7 @@ echo "<!DOCTYPE HTML>
                 </div>
                 <div class='row'>
                     <div class='col-sm-3 col-sm-offset-4'>
-                        <button type='submit' class='btn btn-primary'>Login</button>
+                        <button type='submit' class='btn btn-primary' name='sub'>Login</button>
                     </div>
                 </div>
             </form>
