@@ -7,10 +7,10 @@ $var2 = (rand(0,20));
 
 
 if (isset($_SESSION['count'])) {
-    $_SESSION['count'] = $_SESSION['count'] + 1;
+    $_SESSION[\'count\'] = $_SESSION[\'count\'] + 1;
 } else {
-    $_SESSION['count'] = 0;
-    $_SESSION['countCorect'] = 0;
+    $_SESSION[\'count\'] = 0;
+    $_SESSION[\'countCorect\'] = 0;
 }
 
 
@@ -112,7 +112,7 @@ echo "<!DOCTYPE HTML>
         <div class='row'>
         
         
-            <div class='col-sm-4 col-sm-offset-4'>Score: $_SESSION['count'] / $_SESSION['countCorrect'] </div>
+            <div class='col-sm-4 col-sm-offset-4'>Score: $_SESSION[\'count\'] / $_SESSION[\'countCorrect\'] </div>
             
             
             
