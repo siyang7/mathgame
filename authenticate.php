@@ -4,10 +4,12 @@
 $var1 = (rand(0,20));
 $var2 = (rand(0,20));
 $var3 = (rand(0,1));
-    if ($var3 = 0) {
-        $var4 = "+";
+    if ($var3 == 0) {
+        $operator = "+";
+        $answer = $var1 + $var2;
     } else {
-        $var4 = "-";
+        $operator = "-";
+        $answer = $var1 - $var2;
     }
 
 
@@ -31,7 +33,7 @@ echo "<!DOCTYPE HTML>
             
             <div class='row'>
                 <label class='col-sm-2 col-sm-offset-3'>     $var1   </label>
-                <label class='col-sm-2'>        $var4   </label>
+                <label class='col-sm-2'>        $operator   </label>
                 <label class='col-sm-2'>     $var2       </label>
                 <div class='col-sm-3'></div>
             </div>
