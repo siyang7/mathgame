@@ -83,7 +83,7 @@ echo "<!DOCTYPE HTML>
             <input type='hidden' name='first_number' value='firstNum' />
             <input type='hidden' name='operation' value='operator' />
             <input type='hidden' name='second_number' value='secondNum' />
-            <input type='hidden' name='correctAnswer' value='answer' />
+            <input type='hidden' name='correctAnswer' value='$answer' />
             <input type='hidden' name='score' value='0' />
 
             <div class='form-group'>
