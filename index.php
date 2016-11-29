@@ -1,7 +1,7 @@
 <?php session_start(); 
 
 
-        $email = $password = $emailError = $passError = '';
+        $username = $password = $emailError = $passError = '';
         if(isset($_POST['sub'])) {
             
             $username = $_POST['email']; $password = $_POST['password'];
