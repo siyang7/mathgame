@@ -56,7 +56,11 @@ if ($result == answer) {
 }
 */
 
+
+/*
+// for only allowing numbers
 if (is_numeric(answer) {
+*/
 
 
 echo "<!DOCTYPE HTML>
@@ -135,12 +139,16 @@ echo "<!DOCTYPE HTML>
     </div>
 </body>
 </html>";
-    
+  
+/*
+//only allow numbers
+ Trying to add is_numeric to only allow numbers    
 }
     else {
         echo "You must enter a number!";
         
     }
+*/
 
 
 /*
