@@ -15,6 +15,8 @@ $var3 = (rand(0,1));
 
 if ($result == answer) {
     echo "Correct.";
+} else {
+    echo "Incorrect. The correct answer is" . $result;
 }
 
 
