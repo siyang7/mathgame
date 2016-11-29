@@ -12,12 +12,12 @@ $var3 = (rand(0,1));
         $operator = "-";
         $result = $var1 - $var2;
     }
-
+/*
 if ($result == answer) {
     $statement = "Correct.";
 } else {
     $statement = "Incorrect. The correct answer is &nbsp " . $result;
-}
+}*/
 
 
 echo "<!DOCTYPE HTML>
@@ -58,6 +58,12 @@ echo "<!DOCTYPE HTML>
                 
                 
                     <input type='text' class='form-control' id='answer' name='answer' placeholder='Enter answer' size='6'>
+                    
+                    if ($result == answer) {
+                        $statement = "Correct.";
+                    } else {
+                        $statement = "Incorrect. The correct answer is &nbsp " . $result;
+                    }
                     
                     
                     
