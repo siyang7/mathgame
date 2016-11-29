@@ -36,7 +36,7 @@ echo "<!DOCTYPE HTML>
         <form action='authenticate.php' method='post' role='form' class='form-horizontal'>
             <div class='row'>
                 <div class='col-sm-4 col-sm-offset-4'><h1>Math Game</h1></div>
-                <div class='col-sm-4'><a href='index.php' class='btn btn-default btn-sm'>Logout</a></div>
+                <div class='col-sm-4'><a href='logout.php' class='btn btn-default btn-sm'>Logout</a></div>
             </div>
             
             
@@ -52,7 +52,7 @@ echo "<!DOCTYPE HTML>
             <input type='hidden' name='first_number' value='$var1' />
             <input type='hidden' name='operation' value='$operator' />
             <input type='hidden' name='second_number' value='$var2' />
-            <input type='hidden' name='total' value='0' />
+            <input type='hidden' name='total' value='$result' />
             <input type='hidden' name='score' value='0' />
 
             <div class='form-group'>
