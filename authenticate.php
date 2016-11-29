@@ -130,8 +130,8 @@ echo "<!DOCTYPE HTML>
 </html>";
 
 
-/*
-if ($_POST["answer"] == $_POST["correctAnswer"]) {
+
+if ($_POST["$answer"] == $_POST["correctAnswer"]) {
     
    if (isset($_SESSION['countCorrect'])) {
        
@@ -143,7 +143,7 @@ if ($_POST["answer"] == $_POST["correctAnswer"]) {
        //$_SESSION["countCorrect"] = 0;
        echo "<div class='col-sm-4'>Incorrect.</div>";
    }  
-*/
+
 
 
 /*
