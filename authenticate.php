@@ -130,7 +130,7 @@ echo "<!DOCTYPE HTML>
 if ($result == answer) {
      echo "Correct.";
 } else {
-    echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is" . "&nbsp;" . $result . "";
+    echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is " . $result;
 }
 
 
