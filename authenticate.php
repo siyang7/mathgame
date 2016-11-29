@@ -16,7 +16,7 @@ $var3 = (rand(0,1));
 if ($result == answer) {
      echo "Correct.";
 } else {
-    echo "Incorrect. The correct answer is &nbsp " . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is" . "&nbsp;" . $result;
+    echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is" . "&nbsp;" . $result;
 }
 
 
