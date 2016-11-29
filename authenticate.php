@@ -136,7 +136,7 @@ echo "<!DOCTYPE HTML>
 
 
 
-if ($_POST['answer'] == $_POST['correctAnswer']) {
+if ($_POST['$answer'] == $_POST['correctAnswer']) {
     
    if (isset($_SESSION['countCorrect'])) {
        
