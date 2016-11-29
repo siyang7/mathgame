@@ -56,6 +56,7 @@ if ($result == answer) {
 }
 */
 
+if (is_numeric(answer) {
 
 
 echo "<!DOCTYPE HTML>
@@ -134,6 +135,12 @@ echo "<!DOCTYPE HTML>
     </div>
 </body>
 </html>";
+    
+}
+    else {
+        echo "You must enter a number!";
+        include("authenticate.php");
+    }
 
 
 /*
