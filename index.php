@@ -1,6 +1,18 @@
 <?php session_start(); 
 
-        //extract($_POST);
+/*
+session_start(); $username = $password = $userError = $passError = '';
+if(isset($_POST['sub'])){
+  $username = $_POST['username']; $password = $_POST['password'];
+  if($username === 'admin' && $password === 'password'){
+    $_SESSION['login'] = true; header('LOCATION:wherever.php'); die();
+  }
+  if($username !== 'admin')$userError = 'Invalid Username';
+  if($password !== 'password')$passError = 'Invalid Password';
+}
+
+*/
+
         $username = $password = $userError = $passError = '';
         if(isset($_POST['sub'])) {
             
@@ -43,14 +55,14 @@ echo "<!DOCTYPE HTML>
                 <div class='form-group'>
                     <div class='col-sm-4 text-right'>Email:</div>
                     <div class='col-sm-3'>
-                        <input type='text' class='form-control' id='email' name='email' placeholder='Email' size='6' />
+                        <label for='email'></label><input type='text' class='form-control' id='email' name='email' placeholder='Email' size='6' />
                     </div>
                     <div class='col-sm-5'></div>
                 </div>
                 <div class='form-group'>
                     <div class='col-sm-4 text-right'>Password:</div>
                     <div class='col-sm-3'>
-                        <input type='text' class='form-control' id='password' name='password' placeholder='Password' size='6' />
+                        <label for='password'></label><input type='text' class='form-control' id='password' name='password' placeholder='Password' size='6' />
                     </div>
                     <div class='col-sm-5'></div>
                 </div>
