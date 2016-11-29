@@ -6,7 +6,7 @@
             
             $username = $_POST['email']; $password = $_POST['password'];
             
-            if($username === 'a@a.a' && $password === 'aaa'){
+            if($username === 'a@a.a' && $password === 'aaa') {
                 $_SESSION['login'] = true; header('LOCATION: authenticate.php'); die();
         }
           
@@ -43,14 +43,14 @@ echo "<!DOCTYPE HTML>
                 <div class='form-group'>
                     <div class='col-sm-4 text-right'>Email:</div>
                     <div class='col-sm-3'>
-                        <input type='text' class='form-control' id='email' name='email' placeholder='Email' size='6' />
+                        <input type='text' class='form-control' id='email' name='email' placeholder='Email' size='6' value='$username' />
                     </div>
                     <div class='col-sm-5'></div>
                 </div>
                 <div class='form-group'>
                     <div class='col-sm-4 text-right'>Password:</div>
                     <div class='col-sm-3'>
-                        <input type='text' class='form-control' id='password' name='password' placeholder='Password' size='6' />
+                        <input type='text' class='form-control' id='password' name='password' placeholder='Password' size='6' value='$password' />
                     </div>
                     <div class='col-sm-5'></div>
                 </div>
