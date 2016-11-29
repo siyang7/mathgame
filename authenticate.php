@@ -6,6 +6,14 @@ $var1 = (rand(0,20));
 $var2 = (rand(0,20));
 
 
+$var3 = (rand(0,1));
+    if ($var3 == 0) {
+        $operator = "+";
+        $answer = $var1 + $var2;
+    } else {
+        $operator = "-";
+        $answer = $var1 - $var2;
+    }
 
 
 if (isset($_SESSION['count'])) {
@@ -16,7 +24,7 @@ if (isset($_SESSION['count'])) {
 }
 
 
-
+/*
 if ($_POST['answer'] == $_POST['$result']) {
    if (isset($_SESSION['countCorrect'])) {
        $_SESSION['countCorrect'] = $_SESSION['countCorrect'] + 1;
@@ -26,21 +34,14 @@ if ($_POST['answer'] == $_POST['$result']) {
 }
 
 
-$var3 = (rand(0,1));
-    if ($var3 == 0) {
-        $operator = "+";
-        $answer = $var1 + $var2;
-    } else {
-        $operator = "-";
-        $answer = $var1 - $var2;
-    }
+
 
 if ($result == answer) {
      echo "Correct.";
 } else {
     echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is " . $result;
 }
-        
+*/        
 
 
 /*
@@ -82,7 +83,7 @@ echo "<!DOCTYPE HTML>
             <input type='hidden' name='first_number' value='$var1' />
             <input type='hidden' name='operation' value='$operator' />
             <input type='hidden' name='second_number' value='$var2' />
-            <input type='hidden' name='total' value='$answer' />
+            <input type='hidden' name='correctAnswer' value='$answer' />
             <input type='hidden' name='score' value='0' />
 
             <div class='form-group'>
@@ -119,7 +120,7 @@ echo "<!DOCTYPE HTML>
         <div class='row'>
         
         
-            <div class='col-sm-4 col-sm-offset-4'>Score: $_SESSION['count'] / $_SESSION['countCorrect'] </div>
+            <div class='col-sm-4 col-sm-offset-4'>Score: $_SESSION[countCorrect] / $_SESSION[count]  </div>
             
             
             
@@ -129,6 +130,20 @@ echo "<!DOCTYPE HTML>
 </body>
 </html>";
 
+
+
+if ($_POST["answer"] == $_POST["$result"]) {
+    
+   if (isset($_SESSION["countCorrect"])) {
+       
+       $_SESSION["countCorrect"] = $_SESSION["countCorrect"] + 1;
+       echo"<div class='col-sm-4'>Correct.</div>";
+       
+   } else {
+       
+       $_SESSION["countCorrect"] = 0;
+       echo"<div class='col-sm-4'>Incorrect.</div>";
+   }  
 
 
 
