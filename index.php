@@ -1,4 +1,4 @@
-<?php session_start(); include("include/header.php");
+<?php session_start();
 
 
 
@@ -18,8 +18,22 @@
 
 
 
-echo "
+echo "<!DOCTYPE HTML>
     
+    
+<html lang='en'>
+
+<head>
+	<title>Math Game</title>
+    <link href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css' rel='stylesheet' media='screen' />
+    <link href='styles/styles.css' rel='stylesheet' />
+  <meta charset='utf-8' />
+</head>
+
+    <body>
+
+     
+
         <div class='container'>
             <div class='row'>
                 <div class='col-sm-10 col-sm-offset-1'><h1>Please login to enjoy a math game.</h1></div>
