@@ -118,7 +118,7 @@ if ($_POST['anwser'] == $_POST['$result']) {
     } else {
         $_SESSION['count'] = 0;
     }
-    }
-    echo "count = ". $_SESSION['count'];
+}
+    echo $_SESSION['count'];
 
 ?>
