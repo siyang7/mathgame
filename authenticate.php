@@ -71,9 +71,9 @@ echo "<!DOCTYPE HTML>
             
             
             <div class='row'>
-                <label class='col-sm-2 col-sm-offset-3'>     $var1   </label>
-                <label class='col-sm-2'>        $operator   </label>
-                <label class='col-sm-2'>     $var2       </label>
+                <label class='col-sm-2 col-sm-offset-3'>$var1</label>
+                <label class='col-sm-2'>$operator</label>
+                <label class='col-sm-2'>$var2</label>
                 <div class='col-sm-3'></div>
             </div>
             
@@ -131,7 +131,7 @@ echo "<!DOCTYPE HTML>
 
 
 
-if ($_POST['$answer'] == $_POST['correctAnswer']) {
+if ($_POST['answer'] == $_POST['correctAnswer']) {
     
    if (isset($_SESSION['countCorrect'])) {
        
@@ -143,8 +143,7 @@ if ($_POST['$answer'] == $_POST['correctAnswer']) {
        //$_SESSION["countCorrect"] = 0;
        echo "<div class='col-sm-4'>Incorrect.</div>";
    }  
-
-
+}
 
 
 
