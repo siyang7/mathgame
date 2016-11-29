@@ -2,7 +2,7 @@
 
 
 $var1 = (rand(0,20));
-$var1 = (rand(0,20));
+$var2 = (rand(0,20));
 
 echo "<!DOCTYPE HTML>
 <html lang='en'>
