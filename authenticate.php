@@ -1,8 +1,8 @@
 <?php session_start(); 
 
 
-//echo(rand(0,20));
-
+$var1 = echo(rand(0,20));
+$var1 = echo(rand(0,20));
 
 echo "<!DOCTYPE HTML>
 <html lang='en'>
@@ -23,9 +23,9 @@ echo "<!DOCTYPE HTML>
             
             
             <div class='row'>
-                <label class='col-sm-2 col-sm-offset-3'>    6  </label>
+                <label class='col-sm-2 col-sm-offset-3'>     $var1   </label>
                 <label class='col-sm-2'>+</label>
-                <label class='col-sm-2'>    4  </label>
+                <label class='col-sm-2'>     $var2       </label>
                 <div class='col-sm-3'></div>
             </div>
             
