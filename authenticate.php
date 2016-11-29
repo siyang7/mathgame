@@ -5,7 +5,6 @@
 $var1 = (rand(0,20));
 $var2 = (rand(0,20));
 
-
 $var3 = (rand(0,1));
     if ($var3 == 0) {
         $operator = "+";
@@ -134,15 +133,15 @@ echo "<!DOCTYPE HTML>
 
 if ($_POST["answer"] == $_POST["correctAnswer"]) {
     
-   if (isset($_SESSION["countCorrect"])) {
+   if (isset($_SESSION['countCorrect'])) {
        
-       $_SESSION["countCorrect"] = $_SESSION["countCorrect"] + 1;
-       echo"<div class='col-sm-4'>Correct.</div>";
+       $_SESSION['countCorrect'] = $_SESSION['countCorrect'] + 1;
+       echo "<div class='col-sm-4'>Correct.</div>";
        
    } else {
        
-       $_SESSION["countCorrect"] = 0;
-       echo"<div class='col-sm-4'>Incorrect.</div>";
+       //$_SESSION["countCorrect"] = 0;
+       echo "<div class='col-sm-4'>Incorrect.</div>";
    }  
 
 
