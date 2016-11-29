@@ -141,7 +141,7 @@ if ($_POST['answer'] == $_POST['correctAnswer']) {
    } else {
        
        //$_SESSION["countCorrect"] = 0;
-       echo "<div class='col-sm-4'>Incorrect.</div>";
+       echo "<div class='col-sm-4'>Incorrect."   . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is " . $answer . "</div>";
    }  
 }
 
