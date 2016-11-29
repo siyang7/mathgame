@@ -165,17 +165,6 @@ if ($result == answer) {
 
 
 
-/*
-if ($_POST['answer'] == $_POST['$result']) {
-        echo "";
-    
-    if(isset($_SESSION['count'])) {
-        $_SESSION['count'] = $_SESSION['count'] + 1;
-    } else {
-        $_SESSION['count'] = 0;
-    }
-}
-    echo "&nbsp;&nbsp;&nbsp;" . $_SESSION['count'];
-*/
+
 
 ?>
