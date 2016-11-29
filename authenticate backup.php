@@ -61,9 +61,9 @@ if ($result == answer) {
 // for only allowing numbers
 if (is_numeric(answer) {
 */
-?>
 
-<!DOCTYPE HTML>
+
+echo "<!DOCTYPE HTML>
 <html lang='en'>
 
 <head>
@@ -82,9 +82,9 @@ if (is_numeric(answer) {
             
             
             <div class='row'>
-                <label class='col-sm-2 col-sm-offset-3'><?php echo $var1 ?></label>
-                <label class='col-sm-2'><?php echo $operator ?></label>
-                <label class='col-sm-2'><?php echo $var2 ?></label>
+                <label class='col-sm-2 col-sm-offset-3'>$var1</label>
+                <label class='col-sm-2'>$operator</label>
+                <label class='col-sm-2'>$var2</label>
                 <div class='col-sm-3'></div>
             </div>
             
@@ -130,7 +130,7 @@ if (is_numeric(answer) {
         <div class='row'>
         
         
-            <div class='col-sm-4 col-sm-offset-4'>Score: <?php echo $_SESSION[countCorrect] / $_SESSION[count] ?>  </div>
+            <div class='col-sm-4 col-sm-offset-4'>Score: $_SESSION[countCorrect] / $_SESSION[count]  </div>
             
             
             
@@ -138,9 +138,8 @@ if (is_numeric(answer) {
         </div>
     </div>
 </body>
-</html>
-
-<?php
+</html>";
+  
 /*
 //only allow numbers
  Trying to add is_numeric to only allow numbers    
