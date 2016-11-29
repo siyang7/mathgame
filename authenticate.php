@@ -136,7 +136,8 @@ echo "<!DOCTYPE HTML>
 </html>";
 
 
-
+/*
+// supposed to check if number is corret and see if entered is a number
 if ($_SESSION['key]== true) {
     echo "<font color='red'>You must enter a number for your answer.</font>";
 } else if ($_SESSION['key] == $answer) {
@@ -146,10 +147,10 @@ if ($_SESSION['key]== true) {
     echo '<span style="color: red; font-weight: bold;">INCORRECT, $var1 $operator $var2 is $answer</span>';
 }
 $_SESSION['key'] = $key;
+*/
 
 
 
-/*
 if ($_POST['$answer'] == $_POST['correctAnswer']) {
     
    if (isset($_SESSION['countCorrect'])) {
@@ -164,7 +165,7 @@ if ($_POST['$answer'] == $_POST['correctAnswer']) {
        echo "<div class='col-sm-4'>Incorrect. $var1 $operator $var2 is $answer.</div>";
    }  
 }
-*/
+
 
 
 
