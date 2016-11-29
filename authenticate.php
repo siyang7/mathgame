@@ -139,7 +139,7 @@ echo "<!DOCTYPE HTML>
 }
     else {
         echo "You must enter a number!";
-        include("authenticate.php");
+        
     }
 
 
