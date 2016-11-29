@@ -143,7 +143,7 @@ if ($_POST['answer'] == $_POST['correctAnswer']) {
        $_SESSION['countCorrect'] = $_SESSION['countCorrect'] + 1;
        echo "<div class='col-sm-4'>Correct.</div>";
        
-   } else ($_SESSION['countCorrect'] != $_SESSION['countCorrect']) {
+   } else {
        
        //$_SESSION["countCorrect"] = 0;
        //echo "Incorrect. " . $lhs . " X " . $rhs . " = " . $correct_answer;
