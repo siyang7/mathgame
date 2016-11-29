@@ -15,11 +15,16 @@ $var3 = (rand(0,1));
     }
 
 
+
 if (isset($_SESSION['count'])) {
     $_SESSION['count'] = $_SESSION['count'] + 1;
 } else {
+    
+    echo "count = " . $_SESSION['count'];
+    echo "overall = " . $_SESSION['attempts'];
+    
     $_SESSION['count'] = 0;
-    $_SESSION['countCorrect'] = 0;
+    //$_SESSION['countCorrect'] = 0;
 }
 
 
@@ -135,10 +140,10 @@ if ($_POST['answer'] == $_POST['correctAnswer']) {
     
    if (isset($_SESSION['countCorrect'])) {
        
-       $_SESSION['countCorrect'] = $_SESSION['countCorrect'];
+       $_SESSION['countCorrect'] = $_SESSION['countCorrect'] + 1;
        echo "<div class='col-sm-4'>Correct.</div>";
        
-   } else if ($_SESSION['countCorrect'] != $_SESSION['countCorrect']) {
+   } else ($_SESSION['countCorrect'] != $_SESSION['countCorrect']) {
        
        //$_SESSION["countCorrect"] = 0;
        //echo "Incorrect. " . $lhs . " X " . $rhs . " = " . $correct_answer;
