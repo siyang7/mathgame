@@ -6,12 +6,16 @@ $var1 = (rand(0,20));
 $var2 = (rand(0,20));
 
 
+
+
 if (isset($_SESSION['count'])) {
     $_SESSION['count'] = $_SESSION['count'] + 1;
 } else {
     $_SESSION['count'] = 0;
     $_SESSION['countCorect'] = 0;
 }
+
+
 
 if ($_POST['answer'] == $_POST['$result']) {
    if (isset($_SESSION['countCorrect'])) {
@@ -126,7 +130,7 @@ echo "<!DOCTYPE HTML>
 if ($result == answer) {
      echo "Correct.";
 } else {
-    echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is" . "&nbsp;" . $result;
+    echo "Incorrect.&nbsp;" . $var1 . "&nbsp;" . $operator . "&nbsp;" . $var2 . "&nbsp;" . "is" . "&nbsp;" . $result + "";
 }
 
 
