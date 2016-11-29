@@ -43,14 +43,14 @@ echo "<!DOCTYPE HTML>
                 <div class='form-group'>
                     <div class='col-sm-4 text-right'>Email:</div>
                     <div class='col-sm-3'>
-                        <input type='text' class='form-control' id='email' name='email' placeholder='Email' size='6' value='$username' />
+                        <input type='text' class='form-control' id='email' name='email' placeholder='Email' size='6' />
                     </div>
                     <div class='col-sm-5'></div>
                 </div>
                 <div class='form-group'>
                     <div class='col-sm-4 text-right'>Password:</div>
                     <div class='col-sm-3'>
-                        <input type='text' class='form-control' id='password' name='password' placeholder='Password' size='6' value='$password' />
+                        <input type='text' class='form-control' id='password' name='password' placeholder='Password' size='6' />
                     </div>
                     <div class='col-sm-5'></div>
                 </div>
