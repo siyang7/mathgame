@@ -131,7 +131,7 @@ if ($result == answer) {
 
 
 
-
+/*
 if ($_POST['answer'] == $_POST['$result']) {
         echo "";
     
@@ -142,6 +142,6 @@ if ($_POST['answer'] == $_POST['$result']) {
     }
 }
     echo "&nbsp;&nbsp;&nbsp;" . $_SESSION['count'];
-
+*/
 
 ?>
