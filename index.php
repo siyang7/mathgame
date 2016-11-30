@@ -33,47 +33,47 @@ if (isset($userAnswer) && isset($operator)) {
             break;
             
     }
+}
     
-    //echo "Answer= $answer and userAnswer= $userAnswer and first number = $firstNum and 2nd number is $secondNum"; die();
+   
 
-    if ($answer == $userAnswer) {
-        echo "Correct.";
+
+    if (isset($answer) && $answer == $userAnswer) {
+        echo "<font color='green'><b>CORRECT.</b></font>";
        if (isset($countCorrect)) {
            $countCorrect++;
        } else {
            $countCorrect = 1;
        }  
     } else {
-        echo "Incorrect.&nbsp;" . $firstNum . "&nbsp;" . $operator . "&nbsp;" . $secondNum . "&nbsp;" . "is " . $answer;
-    }
-}
-
-
-$firstNum = (rand(0,20));
-$secondNum = (rand(0,20));
-$operator = (rand(0,1));
-
-
-if ($operator == 0) {
-    $operator = "+";
-    $answer = $firstNum + $secondNum;
-} else {
-    $operator = "-";
-    $answer = $firstNum - $secondNum;
-}
-
-
-
-
-
-        // To only allow numbers to be inputted.
+        
         if (isset($userAnswer)) {
             if (!(is_numeric($userAnswer))) {
-                echo "You can't enter non-numbers. Please enter a number.";
-                //die();
-            }
+                echo "<font color='red'><b>You can't enter non-numbers. Please enter a number.</b></font>";
+                
+            } else {
         
+        
+                echo "<font color='red'><b>INCORRECT, &nbsp;" . $firstNum . "&nbsp;" . $operator . "&nbsp;" . $secondNum . "&nbsp;" . "was " . $answer . "</b></font>";
+                
+            }
         }
+    }
+
+    
+        $firstNum = (rand(0,20));
+        $secondNum = (rand(0,20));
+        $operator = (rand(0,1));
+
+
+        if ($operator == 0) {
+            $operator = "+";
+            $answer = $firstNum + $secondNum;
+        } else {
+            $operator = "-";
+            $answer = $firstNum - $secondNum;
+        }
+
 
 
 

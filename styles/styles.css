@@ -7,3 +7,12 @@ h1 {
     color: darkgreen;
 }
 
+.rightAnswer {
+    font-weight: bold;
+    color: green;
+}
+
+.wrongAnswer {
+    font-weight: bold;
+    color: red;
+}
