@@ -2,26 +2,10 @@
 
 
 if (!isset($_SESSION['login'])) {
-    
     header('Location: login.php');
-        
 } 
-  
 
 extract($_POST);
-
-$firstNum = (rand(0,20));
-$secondNum = (rand(0,20));
-
-$operator = (rand(0,1));
-
-if ($operator == 0) {
-    $operator = "+";
-    $answer = $firstNum + $secondNum;
-} else {
-    $operator = "-";
-    $answer = $firstNum - $secondNum;
-}
 
 
 
@@ -37,59 +21,61 @@ if (isset($count)) {
 }
 
 
-
-
-if (isset($userAnswer)) {
+if (isset($userAnswer) && isset($operator)) {
+    
+    $answer = 0;
+    switch ($operator) {
+        case '+':
+            $answer = $firstNum + $secondNum;
+            break;
+        case '-':
+            $answer = $firstNum - $secondNum;
+            break;
+            
+    }
+    
+    //echo "Answer= $answer and userAnswer= $userAnswer and first number = $firstNum and 2nd number is $secondNum"; die();
 
     if ($answer == $userAnswer) {
         echo "Correct.";
        if (isset($countCorrect)) {
            $countCorrect++;
        } else {
-           $countCorrect = 0;
+           $countCorrect = 1;
        }  
     } else {
         echo "Incorrect.&nbsp;" . $firstNum . "&nbsp;" . $operator . "&nbsp;" . $secondNum . "&nbsp;" . "is " . $answer;
     }
 }
 
-       
-/*
-if (isset($answer) && isset($userAnswer)) {
-    if ($answer == $userAnswer) {
 
-       if (isset($countCorrect)) {
+$firstNum = (rand(0,20));
+$secondNum = (rand(0,20));
+$operator = (rand(0,1));
 
-           $countCorrect = $countCorrect + 1;
-           echo "<div class='col-sm-4'>Correct.</div>";
 
-       } else {
-
-           echo "<div class='col-sm-4'>Incorrect. $firstNum $operator $secondNum is $answer.</div>";
-           $countCorrect = $countCorrect;
-       }  
-    }
+if ($operator == 0) {
+    $operator = "+";
+    $answer = $firstNum + $secondNum;
+} else {
+    $operator = "-";
+    $answer = $firstNum - $secondNum;
 }
-*/
 
 
 
 
 
-/*
-// for only allowing numbers
-if (is_numeric($answer) {
-*/
-
-/*
-//only allow numbers
- Trying to add is_numeric to only allow numbers    
-}
-    else {
-        echo "You must enter a number!";
+        // To only allow numbers to be inputted.
+        if (isset($userAnswer)) {
+            if (!(is_numeric($userAnswer))) {
+                echo "You can't enter non-numbers. Please enter a number.";
+                //die();
+            }
         
-    }
-*/
+        }
+
+
 
 
 
@@ -122,11 +108,16 @@ if (is_numeric($answer) {
             
             
 
-            <input type='hidden' name='first_number' value='<?php echo $firstNum ?>' />
-            <input type='hidden' name='operation' value='<?php echo $operator ?>' />
-            <input type='hidden' name='second_number' value='<?php echo $secondNum ?>' />
+            <input type='hidden' name='firstNum' value='<?php echo $firstNum ?>' />
+            <input type='hidden' name='operator' value='<?php echo $operator ?>' />
+            <input type='hidden' name='secondNum' value='<?php echo $secondNum ?>' />
             <input type='hidden' name='count' value='<?php echo $count ?>' />
-            <input type='hidden' name='score' value='<?php echo $countCorrect ?>' />
+            
+            <?php if (isset($countCorrect))  { ?>
+            
+                <input type='hidden' name='countCorrect' value='<?php echo $countCorrect; ?>' />
+                
+            <?php } ?>
 
             <div class='form-group'>
                 <div class='col-sm-3 col-sm-offset-4'>
@@ -162,7 +153,7 @@ if (is_numeric($answer) {
         <div class='row'>
         
         
-            <?php if (isset($countCorrect) && isset( $count))  { ?>
+            <?php if (isset($countCorrect) && isset($count))  { ?>
                 <div class='col-sm-4 col-sm-offset-4'>Score: <?php echo "$countCorrect / $count" ?>  </div>
             <?php } ?>
             
@@ -174,25 +165,6 @@ if (is_numeric($answer) {
 </html>
 
 <?php
-
-
-
-
-
-
-/*
-// supposed to check if number is corret and see if entered is a number
-if ($_SESSION['key]== true) {
-    echo "<font color='red'>You must enter a number for your answer.</font>";
-} else if ($_SESSION['key] == $answer) {
-    $score++;
-    echo "<font color='green'>Correct.</font>";
-} else if ($_SESSION['key'] !- $answer) {
-    echo '<span style="color: red; font-weight: bold;">INCORRECT, $var1 $operator $var2 is $answer</span>';
-}
-$_SESSION['key'] = $key;
-*/
-
 
 
 
