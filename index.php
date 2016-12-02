@@ -8,17 +8,17 @@ if (!isset($_SESSION['login'])) {
 extract($_POST);
 
 
-
-
 //counter
-if (isset($count)) {
+if (isset($userAnswer) && is_numeric($userAnswer) && !(empty($userAnswer)) && isset($count)) {
     $count = $count + 1;
+    
 } else {
-    
-    
-    $count = 0;
-    $countCorrect = 0;
+    if (!isset($userAnswer)) {
+        $count = 0;
+        $countCorrect = 0;
+    }
 }
+
 
 
 if (isset($userAnswer) && isset($operator)) {
@@ -48,15 +48,26 @@ if (isset($userAnswer) && isset($operator)) {
     } else {
         
         if (isset($userAnswer)) {
-            if (!(is_numeric($userAnswer))) {
-                echo "<font color='red'><b>You can't enter non-numbers. Please enter a number.</b></font>";
+            
+            /*
+            if (isset($count)) {        // to make count not go up if not numbers are entered
+                $count = 0;
+            */ 
+
+                if (!(is_numeric($userAnswer))) {
+                    
+                    //$count = 0;         // don't increment count if no number is entered
+
+                    echo "<font color='red'><b>You can't enter non-numbers. Please enter a number.</b></font>";
+
+                } else {
+                    
+                    //$count++;           // keep incrementing count if incorrect answer
+
+                    echo "<font color='red'><b>INCORRECT, &nbsp;" . $firstNum . "&nbsp;" . $operator . "&nbsp;" . $secondNum . "&nbsp;" . "was " . $answer . "</b></font>";
+                }
                 
-            } else {
-        
-        
-                echo "<font color='red'><b>INCORRECT, &nbsp;" . $firstNum . "&nbsp;" . $operator . "&nbsp;" . $secondNum . "&nbsp;" . "was " . $answer . "</b></font>";
-                
-            }
+            //}
         }
     }
 
@@ -164,15 +175,3 @@ if (isset($userAnswer) && isset($operator)) {
 </body>
 </html>
 
-<?php
-
-
-
-
-
-
-
-
-
-
-?>
